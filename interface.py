@@ -1,3 +1,4 @@
+# raw interface made in Python for FFmpeg commands
 from tkinter import Tk, Button, filedialog
 import subprocess
 
