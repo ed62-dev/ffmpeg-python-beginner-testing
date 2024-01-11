@@ -21,8 +21,8 @@ GUI has
     see srtsubNoDiac-encod.py file
 3. MOVIE+SRT, if checked run FFMPEG command to add subtitle to movie (not burn)
      maybe one of these
-       ffmpeg -i in.mp4 -i in.srt -c copy -disposition:s:0 default out.mkv
-       ffmpeg -i myMovie.mkv -vcodec copy -acodec copy -map 0:v:0 -map 0:a:1 -map 0:s:1 -c:s mov_text -metadata:s:s:0 language=rum test.mp4
+       - ffmpeg -i in.mp4 -i in.srt -c copy -disposition:s:0 default out.mkv
+       - ffmpeg -i myMovie.mkv -vcodec copy -acodec copy -map 0:v:0 -map 0:a:1 -map 0:s:1 -c:s mov_text -metadata:s:s:0 language=rum test.mp4
    
 
 and an OK button
