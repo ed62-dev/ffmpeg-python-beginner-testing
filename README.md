@@ -13,7 +13,7 @@ https://youtu.be/0tM-l_ZsxjU
 python3 -m pip install ttkbootstrap
 https://ttkbootstrap.readthedocs.io/en/latest/
 
-GUI with 
+GUI with and an OK button
 3 checkboxes
 1. CRF28, if checked, run FFMPEG command to rewrite movie to 28 CRF
     ffmpeg -i {input_file} -vcodec libx264 -crf {crf_value} {output_file}
@@ -24,8 +24,11 @@ GUI with
 - ffmpeg -i in.mp4 -i in.srt -c copy -disposition:s:0 default out.mkv
 - ffmpeg -i myMovie.mkv -vcodec copy -acodec copy -map 0:v:0 -map 0:a:1 -map 0:s:1 -c:s mov_text -metadata:s:s:0 language=rum test.mp4
    
+On click OK, depending checkboxes checked, app will run different Python commands
+- For CRF28 checked, app will open a window to choose the movie and remind moviePath and movieName, run ffmpeg and save new movie with movieNameCRF
+- For SRT/SUB checked, app will open a window to choose the srt/sub file, remind srtName/subName, replace characters and save srt file as srtNameok (or subNameok) in same folder
+- For MOVIE+SRT, get the movieName or movieNameCRF and add subtitle file to the movie and save as movSrtOK
 
-and an OK button
 
 8 variables, maybe less - without ?
 1. moviePath
