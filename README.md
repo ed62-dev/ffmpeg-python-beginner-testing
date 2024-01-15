@@ -4,38 +4,38 @@ tests for using ffmpeg and python commands
 as a beginner, i try to make some applications
 
 for the moment, i just try to make an application
-with an interface and buttons for some ffmpeg commands,
-for personal use
+with an interface for some ffmpeg commands,
+personal use
 
-GUI with tkinter 
+Resource:
+Python Tkinter GUI Design Using ttkbootstrap - Complete Course
 https://youtu.be/0tM-l_ZsxjU
 
 python3 -m pip install ttkbootstrap
 https://ttkbootstrap.readthedocs.io/en/latest/
 
-GUI with and an OK button
-3 checkboxes
-1. CRF28, if checked, run FFMPEG command to rewrite movie to 28 CRF
+GUI with 
+* 1 spinbox and a checkbox for CRF, if checked, run FFMPEG command to rewrite movie CRF to crf_value
     ffmpeg -i {input_file} -vcodec libx264 -crf {crf_value} {output_file}
-2. SRT/SUB, if checked run diacritics removal commands in Python
+* 2 checkboxes
+     1. SRT/SUB, if checked run diacritics removal commands in Python
     see srtsubNoDiac-encod.py file
-3. MOVIE+SRT, if checked run FFMPEG command to add subtitle to movie (not burn)
+     2. MOVIE+SRT, if checked run FFMPEG command to add subtitle to movie (not burn)
      maybe one of these commands
-- ffmpeg -i in.mp4 -i in.srt -c copy -disposition:s:0 default out.mkv
-- ffmpeg -i myMovie.mkv -vcodec copy -acodec copy -map 0:v:0 -map 0:a:1 -map 0:s:1 -c:s mov_text -metadata:s:s:0 language=rum test.mp4
-   
+        - ffmpeg -i in.mp4 -i in.srt -c copy -disposition:s:0 default out.mkv
+        - ffmpeg -i myMovie.mkv -vcodec copy -acodec copy -map 0:v:0 -map 0:a:1 -map 0:s:1 -c:s mov_text -metadata:s:s:0 language=rum test.mp4
+
+* and an OK button.
+
 On click OK, depending checkboxes checked, app will run different Python commands
-- For CRF28 checked, app will open a window to choose the movie and remind moviePath and movieName, run ffmpeg and save new movie with movieNameCRF
-- For SRT/SUB checked, app will open a window to choose the srt/sub file, remind srtName/subName, replace characters and save srt file as srtNameok (or subNameok) in same folder
-- For MOVIE+SRT, get the movieName or movieNameCRF and add subtitle file to the movie and save as movSrtOK
+- If CRF checked, app will open a window to choose the movie and remind moviePath and movieName, run ffmpeg and save new movie with movieName=movieName+CRF
+- If SRT/SUB checked, app will open a window to choose the srt/sub file, remind srtName/subName, replace characters and save srt file as srtName=srtName+ok in same folder
+- If MOVIE+SRT checked, get the movieName and add subtitle file to the movie and save as movieName+ok
 
 
-8 variables, maybe less - without ?
+Variables
 1. moviePath
 2. movieName
-3. movieNameCRF ?
-4. srtPath
-5. srtName
-6. srtEncod
-7. srtNameNoDiac ?
-8. movieSrtName ?
+3. srtPath
+4. srtName
+5. srtEncod
