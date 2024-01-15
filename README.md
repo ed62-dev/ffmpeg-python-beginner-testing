@@ -29,7 +29,7 @@ GUI with
 
 On click OK, depending checkboxes checked, app will run different Python commands
 - If CRF checked, app will open a window to choose the movie and remind moviePath and movieName, run ffmpeg and save new movie with movieName=movieName+CRF
-- If SRT/SUB checked, app will open a window to choose the srt/sub file, remind srtName/subName, replace characters and save srt file as srtName=srtName+ok in same folder
+- If SRT/SUB checked, app will open a window to choose the srt/sub file, remind srtName/subName, replace characters and save srt file as srtName=srtName+ok in same folder (for ass files, convert to srt)
 - If MOVIE+SRT checked, get the movieName and add subtitle file to the movie and save as movieName+ok
 
 
