@@ -36,6 +36,6 @@ On click OK, depending checkboxes checked, app will run different Python command
 Variables
 1. moviePath
 2. movieName
-3. srtPath
-4. srtName
-5. srtEncod
+-   srtPath - same as moviePath
+3. srtName
+4. srtEncod
