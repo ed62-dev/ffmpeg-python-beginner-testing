@@ -69,7 +69,7 @@ def btn_clicked():
     if varsubsrt.get()==1:
         ffmpegsubsrt()
     if movsub.get()==1:
-        movsub()        
+        ffmpegmovsub()        
 ''' if srt_sub_checkbox.instate(['selected']):
         srt_sub_checked()
     if movie_srt_checkbox.instate(['selected']):
