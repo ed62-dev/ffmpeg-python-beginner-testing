@@ -22,7 +22,8 @@ if not crf_value:
 # Get the new file name, mkv preffered
 output_file = filedialog.asksaveasfilename(defaultextension='.mkv')
 
-# Specify the output file name
+# Specify the output file name - modified because
+# the output_file will be saved in script's directory
 #output_file = "output.mp4"
 
 # Construct the ffmpeg command
