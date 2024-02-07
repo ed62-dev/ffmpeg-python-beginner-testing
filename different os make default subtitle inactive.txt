@@ -1,0 +1,15 @@
+Using ffmpeg to add default subtitles to movies
+suggestions to help in solving the default subtitle problem when playing movies in VLC on different operating systems
+There are problems when trying to play movies in VLC on Windows because the default subtitles are disabled. 
+
+Here are some possible solutions:
+1. Embed Subtitles in Video File: 
+  Embed subtitles in the video file itself using ffmpeg, by adding the subtitle track to the video file and setting the appropriate metadata to make the subtitle appear by default without having to manually select it when you play the video.
+
+2. Use MKV Format: 
+  If embedding subtitles in MP4 does not provide the default behavior, switch to another format, such as MKV. MKV files can provide more flexibility in managing default subtitle tracks.
+
+3. Set Forced Subtitles:
+  Another approach involves marking the subtitle track in the output file as forced. This can be done using MP4Box or FFmpeg. However, it is important to note that the recognition of forced subtitles might depend on the version of VLC used.
+
+By experimenting with different methods and file formats, find the right solution while maintaining the cleanliness of the original film.
