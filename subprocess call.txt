@@ -1,0 +1,37 @@
+It is possible to have a button in a Python GUI, 
+trigger the execution of another Python script. 
+You can achieve this by using the subprocess module 
+to call the Python code that you want to run when the button is clicked.
+
+Example of how you can accomplish this 
+using the subprocess module:
+
+python
+import subprocess
+import tkinter as tk
+
+def run_program():
+    subprocess.call(["python", "my_other_python_program.py"])
+
+root = tk.Tk()
+button = tk.Button(root, text='Run My Program', command=run_program)
+button.pack()
+
+root.mainloop()
+
+In this example, when the button is clicked, 
+the run_program function is called, 
+which in turn uses subprocess.call to execute 
+the other Python script named "my_other_python_program.py".
+
+This approach allows to keep the functionality 
+of the second Python script separate 
+and trigger its execution from the main GUI script 
+without the need to rewrite the code.
+
+Here, replace "my_other_python_program.py" with 
+the actual filename of the Python script you want to run.
+
+The subprocess module can effectively trigger 
+the execution of another Python script from GUI 
+without the need to rewrite your existing code.
