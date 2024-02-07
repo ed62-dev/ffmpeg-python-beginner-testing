@@ -41,5 +41,5 @@ Possible variables
 4. srtEncod
 
 ... but there are many other factors:
-    - movie format - ex. vob
-    - sometimes must remove all subtitles, then add subtitle...
+   - movie format - ex. vob
+   - sometimes must remove all subtitles, then add subtitle...
