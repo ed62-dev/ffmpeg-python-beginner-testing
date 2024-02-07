@@ -33,9 +33,12 @@ On click OK, depending checkboxes checked, app will run different Python command
 - If MOVIE+SRT checked, get the movieName and add subtitle file to the movie and save as movieName+ok
 
 
-Variables
+Possible variables
 1. moviePath
 2. movieName
 -   srtPath - same as moviePath
 3. srtName
 4. srtEncod
+... but there are many other factors:
+    - movie format - ex. vob
+    - sometimes must remove all subtitles, then add subtitle...
