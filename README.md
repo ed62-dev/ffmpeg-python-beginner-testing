@@ -39,6 +39,7 @@ Possible variables
 -   srtPath - same as moviePath
 3. srtName
 4. srtEncod
+
 ... but there are many other factors:
     - movie format - ex. vob
     - sometimes must remove all subtitles, then add subtitle...
